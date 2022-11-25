@@ -3,7 +3,7 @@ Team Rio Backend Written in Flask for the SpaceYaTech Project
 
 
 ## Table of Contents
-- [Team-Rio-Flask](#team-rio-django)
+- [Team-Rio-Flask](#team-rio-flask)
   - [Table of Contents](#table-of-contents)
   - [Product vision](#product-vision)
     - [Vision Abstract](#vision-abstract)
