@@ -1,0 +1,2 @@
+TESTING = True
+LOG_LEVEL = "INFO"
