@@ -112,6 +112,12 @@ $ flask run
 ```
 At this point, the development server should be accessible at _http://localhost:5000/_
 
+2. Testing - To run all the tests:
+
+```bash
+$ python -m pytest -v
+```
+
 ## Reference Resources
 - [virtualenv](https://docs.python-guide.org/dev/virtualenvs/)
 - [Flask](https://flask.palletsprojects.com/)

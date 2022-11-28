@@ -15,7 +15,7 @@ def help():
     """ List Available Commands """
 
     scripts = {
-        f"{help.__name__}": help, 
+        f"{help.__name__}": help,
         f"{generate_secret_key.__name__}": generate_secret_key,
     }
     print("\n\tAvailable commands:")
@@ -25,10 +25,10 @@ def help():
 
 if __name__ == "__main__":
     scripts = {
-        f"{help.__name__}": help, 
+        f"{help.__name__}": help,
         f"{generate_secret_key.__name__}": generate_secret_key,
     }
-    
+
     if len(os.sys.argv) > 1:
         if os.sys.argv[1] == generate_secret_key.__name__:
             if len(os.sys.argv) > 2:
@@ -45,4 +45,4 @@ if __name__ == "__main__":
         print("\033[31m\tPlease specify a script after `scripts.py`\033[00m")
         help()
 
-    print("\n") 
+    print("\n")
