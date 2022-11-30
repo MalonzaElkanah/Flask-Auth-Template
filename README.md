@@ -137,6 +137,7 @@ $ python -m pytest -v
   * Werkzeug: set of utilities for creating a Python application that can talk to a WSGI server
 * **pytest**: framework for testing Python projects
 * **Flask-SQLAlchemy** - ORM (Object Relational Mapper) for Flask
+* **Flask-Migrate** - An extension that handles SQLAlchemy database migrations for Flask applications using Alembic. 
 * **Flask-RESTful** - An extension for Flask that adds support for quickly building REST APIs.
 * **psycopg2** - PostgreSQL database adapter for the Python programming language.
 * **flake8** - static analysis tool
