@@ -13,7 +13,10 @@ Team Rio Backend Written in Flask for the SpaceYaTech Project
     - [New contributor guide](#new-contributor-guide)
     - [Getting started](#getting-started)
   - [Installation guide](#installation-guide)
+    - [Dependacies Installation](#dependacies-installation)
+    - [Database Initialization](#database-initialization)
   - [Testing and Running Guide](#testing-and-running-guide)
+  - [Key Python Modules Used](#key-python-modules-used)
   - [Reference Resources](#reference-resources)
 
 ## Product vision
@@ -85,6 +88,9 @@ Congratulations :tada::tada: The SpaceYaTech team thanks you :sparkles:
 Once your PR is merged, your contributions will be publicly visible
 
 ## Installation Guide
+
+### Dependacies Installation
+
 - Installing the application locally requires 
 	1. [Python 3.7+](https://www.python.org/downloads/release/python-393/) - download and install it.
 	2. [virtualenv](https://docs.python-guide.org/dev/virtualenvs/) - To create a virtual environment and activate it, run the following commands. 
@@ -98,6 +104,9 @@ $ pip install -r requirements.txt
 ```
 - The project contains a `.env.sample` file at its root with the environment variables required to run the app. Copy the file and name it `.env`, populating it with the correct values.
 
+### Database Initialization
+
+- This Flask application needs a [PostgreSQL](https://www.postgresql.org/docs/current/tutorial-start.html) database to store data. Create a database for this project, get the Database Name, Port, host, username and password and add it to `.env` file as shown in `.env.sample` file.  
 - Run the following commands to set-up(create tables for the project) the database using [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/index.html): 
 ```bash
 $ flask db init
@@ -118,9 +127,23 @@ At this point, the development server should be accessible at _http://localhost:
 $ python -m pytest -v
 ```
 
+## Key Python Modules Used
+
+* **Flask**: micro-framework for web application development which includes the following dependencies:
+  * click: package for creating command-line interfaces (CLI)
+  * itsdangerous: cryptographically sign data 
+  * Jinja2: templating engine
+  * MarkupSafe: escapes characters so text is safe to use in HTML and XML
+  * Werkzeug: set of utilities for creating a Python application that can talk to a WSGI server
+* **pytest**: framework for testing Python projects
+* **Flask-SQLAlchemy** - ORM (Object Relational Mapper) for Flask
+* **Flask-RESTful** - An extension for Flask that adds support for quickly building REST APIs.
+* **psycopg2** - PostgreSQL database adapter for the Python programming language.
+* **flake8** - static analysis tool
+
 ## Reference Resources
 - [virtualenv](https://docs.python-guide.org/dev/virtualenvs/)
 - [Flask](https://flask.palletsprojects.com/)
 - [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/index.html)
-
-
+- [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/3.0.x/quickstart/)
+- [Flask-Restful](https://flask-restful.readthedocs.io/en/latest/)

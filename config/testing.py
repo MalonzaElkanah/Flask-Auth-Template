@@ -4,3 +4,6 @@ import os
 TESTING = True
 LOG_LEVEL = "DEBUG"
 SECRET_KEY = os.getenv("SECRET_KEY")
+
+SQLALCHEMY_DATABASE_URI = f'postgresql://{os.getenv("TEST_DATABASE_USER")}:{os.getenv("TEST_DATABASE_PASSWORD")}@{os.getenv("TEST_DATABASE_HOST")}:{os.getenv("TEST_DATABASE_PORT")}/{os.getenv("TEST_DATABASE_NAME")}'
+SQLALCHEMY_TRACK_MODIFICATIONS = False
