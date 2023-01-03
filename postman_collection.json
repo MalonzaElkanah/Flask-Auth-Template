@@ -1,0 +1,803 @@
+{
+	"info": {
+		"_postman_id": "7767668a-d5e9-4e66-a224-263784ebd898",
+		"name": "S-Y-T Flask RIO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19603020"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Accounts",
+					"item": [
+						{
+							"name": "Account - Lists",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}/user/me/accounts/",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"user",
+										"me",
+										"accounts",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Account - Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Malone\",\n    \"bio_data\": \"This is a test.\",\n    \"display_photo\": \"display_photo\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}/user/me/accounts/",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"user",
+										"me",
+										"accounts",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Account - Detail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}/user/me/accounts/222f64cc-79f6-11ed-80d3-6b0192736463/",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"user",
+										"me",
+										"accounts",
+										"222f64cc-79f6-11ed-80d3-6b0192736463",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Account - Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Malone101\",\n    \"bio_data\": \"This is a test.\",\n    \"display_photo\": \"display_photo\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}/user/me/accounts/222f64cc-79f6-11ed-80d3-6b0192736463/",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"user",
+										"me",
+										"accounts",
+										"222f64cc-79f6-11ed-80d3-6b0192736463",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Account - Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}/user/me/accounts/222f64cc-79f6-11ed-80d3-6b0192736463/",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"user",
+										"me",
+										"accounts",
+										"222f64cc-79f6-11ed-80d3-6b0192736463",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Roles",
+					"item": [
+						{
+							"name": "Roles - Lists",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}/user/roles/",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"user",
+										"roles",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Roles - Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"moderator\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}/user/roles/",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"user",
+										"roles",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Roles - Detail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}/user/roles/56058e26-748c-11ed-aa36-1beace6c3a2c/",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"user",
+										"roles",
+										"56058e26-748c-11ed-aa36-1beace6c3a2c",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Roles - Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"CustomerCare\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}/user/roles/e63301ee-81e4-11ed-9d76-73174e16b677/",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"user",
+										"roles",
+										"e63301ee-81e4-11ed-9d76-73174e16b677",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Roles - Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}/user/roles/e63301ee-81e4-11ed-9d76-73174e16b677/",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"user",
+										"roles",
+										"e63301ee-81e4-11ed-9d76-73174e16b677",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"malonza\",\n    \"email\": \"elkanahmalonza2@gmail.com\",\n    \"phone_number\": \"0700000001\",\n    \"password\": \"Pass1234\",\n    \"confirm_password\": \"Pass1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/user/register/",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"user",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm User Email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}/user/confirm-email?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzE3MDk1OTgsImlhdCI6MTY3MTcwMjM5OCwiZGF0YSI6ImVsa2FuYWhtYWxvbnphMUBnbWFpbC5jb20ifQ.cOKyWY_poyxewkRVcirIGsDXG-3kFh2H_05HABJbX9c",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"user",
+								"confirm-email"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzE3MDk1OTgsImlhdCI6MTY3MTcwMjM5OCwiZGF0YSI6ImVsa2FuYWhtYWxvbnphMUBnbWFpbC5jb20ifQ.cOKyWY_poyxewkRVcirIGsDXG-3kFh2H_05HABJbX9c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resend User Email confirm link",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"elkanahmalonza3@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/user/confirm-email/",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"user",
+								"confirm-email",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"malone\",\n    \"password\": \"Pass1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/user/login/",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"user",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh User Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{refresh_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}/user/refresh/",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"user",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Revoke User Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3MTcwNDQ2MCwianRpIjoiMTBhZWU1NWUtNmNjNi00ZGI2LWFhYjMtYTM3OWVlZDdlNGFhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImE5OTFkYmMyLTc1NTgtMTFlZC05ZWQ4LWZmNDIzMTI4NDA3NyIsIm5iZiI6MTY3MTcwNDQ2MCwiZXhwIjoxNjcxNzA4MDYwfQ.qQssPd9k7Mb8s231LS1ZXvBMyeckebao6qDQiOpkQHY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}/user/logout/",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"user",
+								"logout",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change User Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"current_password\": \"Pass1234\",\n    \"new_password\": \"PASS1234\",\n    \"confirm_password\": \"PASS1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/user/change-password/",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"user",
+								"change-password",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password - Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"elkanahmalonza@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/user/forgot-password/",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"user",
+								"forgot-password",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password - New Password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"new_password\": \"Pass1234\",\n    \"confirm_password\": \"Pass1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/user/forgot-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzE3MDg4ODAsImlhdCI6MTY3MTcwNTI4MCwiZGF0YSI6ImE5OTFkYmMyLTc1NTgtMTFlZC05ZWQ4LWZmNDIzMTI4NDA3NyJ9.XLp91njrAvVBys-59TY-ngB4fF1qH1UFWshQZmI61Ho",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"user",
+								"forgot-password"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzE3MDg4ODAsImlhdCI6MTY3MTcwNTI4MCwiZGF0YSI6ImE5OTFkYmMyLTc1NTgtMTFlZC05ZWQ4LWZmNDIzMTI4NDA3NyJ9.XLp91njrAvVBys-59TY-ngB4fF1qH1UFWshQZmI61Ho"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Profile - Get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}/user/me/",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"user",
+								"me",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User Profile - Update",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"malone\",\n    \"email\": \"elkanahmalonza@gmail.com\",\n    \"phone_number\": \"0716504983\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}/user/me/",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"user",
+										"me",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "User Profile - Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"malone\",\n    \"email\": \"elkanahmalonza@gmail.com\",\n    \"phone_number\": \"0716504983\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/user/me/",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"user",
+								"me",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User - Lists",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}/users/",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User - Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}/users/a991dbc2-7558-11ed-9ed8-ff4231284077/",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"users",
+								"a991dbc2-7558-11ed-9ed8-ff4231284077",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local_url",
+			"value": "http://127.0.0.1:5000/v1",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3MTcyOTMzNywianRpIjoiMzhlZmNmNDctNmRmNC00NzE5LWI5ODYtYWY5ZTY1N2Y2ZThjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImE5OTFkYmMyLTc1NTgtMTFlZC05ZWQ4LWZmNDIzMTI4NDA3NyIsIm5iZiI6MTY3MTcyOTMzNywiZXhwIjoxNjcxNzMyOTM3fQ.5Kb1UOsJUdOuq1oVOsYyX8OgPou1lG07fhLfy6t9L7s",
+			"type": "string"
+		},
+		{
+			"key": "refresh_token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3MTcwNDk5NywianRpIjoiMmZkMjdkYzQtMTNjYi00NTEwLTgzYTYtNDc3NGY0ZTE4MGUwIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiJhOTkxZGJjMi03NTU4LTExZWQtOWVkOC1mZjQyMzEyODQwNzciLCJuYmYiOjE2NzE3MDQ5OTcsImV4cCI6MTY3NDI5Njk5N30.Ws8i84Ge4vZpIIczbVGoesmqPqGC-mGC9hJgunplW_c",
+			"type": "string"
+		}
+	]
+}
