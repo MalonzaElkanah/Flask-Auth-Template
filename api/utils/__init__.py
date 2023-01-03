@@ -4,6 +4,7 @@ import os
 from flask import Flask
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
+from flask_jwt_extended import JWTManager
 
 
 logging.basicConfig()
@@ -11,6 +12,7 @@ logging.root.setLevel(getattr(logging, os.getenv("LOG_LEVEL", "INFO")))
 
 db = SQLAlchemy()
 migrate = Migrate()
+jwt = JWTManager()
 
 
 def create_app(config_name, name="Main"):
@@ -31,8 +33,9 @@ def create_app(config_name, name="Main"):
     })
     logging.info(f"Flask App: {name} application loaded the following configuration... {app_config}")
 
-    # Register Database, Model and Migrations
+    # Register Extentions
     db.init_app(app)
     migrate.init_app(app, db)
+    jwt.init_app(app)
 
     return app
