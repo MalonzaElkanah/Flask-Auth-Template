@@ -46,12 +46,12 @@
 	1. [Python 3.7+](https://www.python.org/downloads/release/python-393/) - download and install it.
 	2. [virtualenv](https://docs.python-guide.org/dev/virtualenvs/) - To create a virtual environment and activate it, run the following commands. 
 	```bash
-	$ python3 -m venv venv
-	$ source venv/bin/activate
+	python3 -m venv venv
+	source venv/bin/activate
 	```
 - Install the project dependacies from requirements.txt by running the following command in shell: 
 ```bash
-$ pip install -r requirements.txt 
+pip install -r requirements.txt 
 ```
 - The project contains a `.env.sample` file at its root with the environment variables required to run the app. Copy the file and name it `.env`, populating it with the correct values.
 
@@ -60,27 +60,27 @@ $ pip install -r requirements.txt
 - This Flask application needs a [PostgreSQL](https://www.postgresql.org/docs/current/tutorial-start.html) database to store data. Create a database for this project, get the Database Name, Port, host, username and password and add it to `.env` file as shown in `.env.sample` file.  
 - Run the following commands to set-up(create tables for the project) the database using [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/index.html): 
 ```bash
-$ flask db init
-$ flask db migrate -m 'set-up the db'
-$ flask db upgrade
+flask db init
+flask db migrate -m 'set-up the db'
+flask db upgrade
 ```
 - If this is your first time setting up, you will need initial data seeded to your database. Run the following command to-do so:
 ```bash
-$ flask seed
+flask seed
 ```
 
 ## Testing and Running Guide
 1. To activate the development server run:
 ```bash
-$ source FLASK_DEBUG=True
-$ flask run
+export FLASK_DEBUG=True
+flask run
 ```
 At this point, the development server should be accessible at _http://localhost:5000/_
 
 2. Testing - To run all the tests:
 
 ```bash
-$ python -m pytest -v
+python -m pytest -v
 ```
 
 ## API Documentation

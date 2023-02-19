@@ -80,7 +80,7 @@ class UserRegisterViewAPI(Resource):
 
         if user:
             message = f'''
-                Thank you for signing up with SpaceYaTech.
+                Thank you for signing up with Malonza-Tech.
                 Please click this
                 <a href="{url_for("user_confirm-email_api")}?token={user.email_confirm_token}">
                 link to confirm your email</a>
